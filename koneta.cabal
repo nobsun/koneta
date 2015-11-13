@@ -1,0 +1,54 @@
+name:                koneta
+version:             0.1.1.1
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            http://github.com/githubuser/koneta#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Nobuo Yamashita
+maintainer:          nobsun@sampou.org
+copyright:           2015 Nobuo Yamashita
+-- category:            Koneta
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     MyNumber.Validate
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+executable validate-mynumber
+  hs-source-dirs:      app
+  main-is:             validate-mynumber.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , koneta
+  default-language:    Haskell2010
+
+test-suite doctest
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test, src
+  main-is:             doctests.hs
+  build-depends:       base
+                     , doctest
+                     , koneta
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+-- test-suite spec
+--   type:                exitcode-stdio-1.0
+--   hs-source-dirs:      test
+--   main-is:             Spec.hs
+--   other-modules:       MyNumberValidateSpec
+--   build-depends:       base
+--                      , koneta
+--                      , hspec >= 1.3
+--                      , QuickCheck
+--   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+--   default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/koneta
