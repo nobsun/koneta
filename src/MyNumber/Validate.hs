@@ -1,3 +1,4 @@
+-- | validate 'My Number digits'
 module MyNumber.Validate (valid) where
 
 import Data.Char (isDigit, digitToInt)
