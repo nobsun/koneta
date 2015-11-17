@@ -1,4 +1,4 @@
 # koneta
 A Collection of small materials for Haskell programming
 
-- ['My Number' digits validator](blob/master/src/MyNumber/Validate.hs)
+- ['My Number' digits validator](src/MyNumber/Validate.hs)
